@@ -6,9 +6,9 @@ class Connection:
 
     def __init__(self):
         try:
-            self.connection = mc.connect(
+            self.__connection = mc.connect(
                 host="",
-                port=000,
+                port=0000,
                 user="",
                 password="",
                 db=""
@@ -17,8 +17,9 @@ class Connection:
             print("Error -> {}".format(err))
 
     def get_connection(self):
-        if self.connection.is_connected():
+        if self.__connection.is_connected():
             try:
-                return self.connection
+                return self.__connection
             except Error as err:
                 print("Error -> {}".format(err))
+
