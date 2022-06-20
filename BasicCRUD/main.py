@@ -29,10 +29,10 @@ def print_result(data):
     +---------------------------------------------------------+
     | Classroom Id    Classroom Name       Number of students |
     |---------------------------------------------------------|
-    {}
+     {}
     +---------------------------------------------------------+\
     """
-    Table = (Table.format('\n'.join("|{:>6} {:>21} {:>17}           |".format(cr_id, cr_name, cr_number_student)
+    Table = (Table.format('\n'.join("{:>6} {:>21} {:>17}".format(cr_id, cr_name, cr_number_student)
                                     for cr_id, cr_name, cr_number_student in data)))
     print(Table)
 
